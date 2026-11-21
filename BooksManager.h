@@ -7,21 +7,20 @@
 #include "Book.h"
 #include "ReadingSession.h"
 
-using namespace std;
 
 class BooksManager {
 private:
-    map<string, Book> books_map;
-    map<string, vector<ReadingSession>> user_sessions;
+    std::map<std::string, Book> books_map;
+    std::map<std::string, std::vector<ReadingSession>> user_sessions;
 
 public:
     BooksManager();
-    void add_book(string isbn, string title, string author, int pages);
-    const map<string, Book>& get_books() const;
-    vector<ReadingSession>& get_user_sessions(string username);
-    ReadingSession* get_or_create_session(string username, string isbn);
-    Book get_book_by_isbn(string isbn);
-    string get_current_date();
+    void add_book(std::string isbn, std::string title, std::string author, int pages);
+    const std::map<std::string, Book>& get_books() const;
+    std::vector<ReadingSession>& get_user_sessions(std::string username);
+    ReadingSession* get_or_create_session(std::string username, std::string isbn);
+    Book get_book_by_isbn(std::string isbn);
+    std::string get_current_date();
 };
 
 #endif
