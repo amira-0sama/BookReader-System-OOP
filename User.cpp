@@ -1,4 +1,5 @@
 #include "User.h"
+using namespace std;
 
 User::User() : is_admin(false) {}
 
