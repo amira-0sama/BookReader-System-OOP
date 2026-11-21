@@ -1,5 +1,6 @@
 #include "BookReaderUI.h"
 #include <iostream>
+using namespace std;
 
 int BookReaderUI::read_int(int low, int high) {
     int value;
@@ -50,7 +51,8 @@ void BookReaderUI::handle_signup() {
         else break;
     }
     cout << "Enter password: "; cin >> pw;
-    cout << "Enter name: "; cin >> name;
+    cin.ignore(10000, '\n');
+    cout << "Enter name: "; getline(cin, name);
     cout << "Enter email: "; cin >> email;
 
     users_manager.add_new_user(un, pw, name, email);
@@ -69,8 +71,9 @@ void BookReaderUI::admin_menu() {
             string isbn, title, auth;
             int pages;
             cout << "Enter ISBN: "; cin >> isbn;
-            cout << "Enter Title: "; cin >> title;
-            cout << "Enter Author: "; cin >> auth;
+            cin.ignore(10000, '\n');
+            cout << "Enter Title: "; getline(cin, title);
+            cout << "Enter Author: "; getline(cin, auth);
             cout << "Enter Pages: "; cin >> pages;
             books_manager.add_book(isbn, title, auth, pages);
         } else {
