@@ -2,24 +2,23 @@
 #define USER_H
 
 #include <string>
-using namespace std;
 
 class User {
 private:
-    string username;
-    string password;
-    string name;
-    string email;
+    std::string username;
+    std::string password;
+    std::string name;
+    std::string email;
     bool is_admin;
 
 public:
     User();
-    User(string un, string pw, string n, string em, bool admin);
+    User(std::string un, std::string pw, std::string n, std::string em, bool admin);
 
-    string get_username() const;
-    string get_password() const;
-    string get_name() const;
-    string get_email() const;
+    std::string get_username() const;
+    std::string get_password() const;
+    std::string get_name() const;
+    std::string get_email() const;
     bool get_is_admin() const;
 };
 
