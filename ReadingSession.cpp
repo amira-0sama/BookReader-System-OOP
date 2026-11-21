@@ -1,4 +1,5 @@
 #include "ReadingSession.h"
+using namespace std;
 
 ReadingSession::ReadingSession() : current_page(1) {}
 
