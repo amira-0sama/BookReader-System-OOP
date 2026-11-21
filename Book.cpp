@@ -1,4 +1,5 @@
 #include "Book.h"
+using namespace std;
 
 Book::Book() : pages_count(0) {}
 
