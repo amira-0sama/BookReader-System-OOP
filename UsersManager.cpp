@@ -1,4 +1,5 @@
 #include "UsersManager.h"
+using namespace std;
 
 UsersManager::UsersManager() : current_user(nullptr) {
     users_map["admin"] = User("admin", "admin", "Miro Admin", "admin@fayoum.edu.eg", true);
