@@ -1,6 +1,7 @@
 #include "BooksManager.h"
 #include <sstream>
 #include <ctime>
+using namespace std;
 
 BooksManager::BooksManager() {
     books_map["111"] = Book("111", "C++ Programming", "Dr. Moataz", 50);
